@@ -27,7 +27,7 @@
       ec2_group:
         name: vproELB-sg
         description: Allow port 80 from everywhere and all port within sg
-        region: "{{region}}"
+        region: us-east-2
         vpc_id: "{{vpcid}}"
         rules:
           - proto: tcp
