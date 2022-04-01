@@ -40,7 +40,7 @@
       ec2_group:
         name: vproStack-sg
         description: Allow port 22 from everywhere and all port within sg
-        region: "{{region}}"
+        region: us-east-2
         vpc_id: "{{vpcid}}"
         purge_rules: no
         rules:
@@ -73,7 +73,7 @@
     - name: Creating Nginx web01
       ec2:
         key_name: vprokey
-        region: "{{region}}"
+        region: us-east-2
         instance_type: t2.micro
         image: "{{nginx_ami}}"
         wait: yes
@@ -97,7 +97,7 @@
     - name: Creating tomcat app01
       ec2:
         key_name: vprokey
-        region: "{{region}}"
+        region: us-east-2
         instance_type: t2.micro
         image: "{{tomcat_ami}}"
         wait: yes
@@ -120,7 +120,7 @@
     - name: Creating memcache mc01
       ec2:
         key_name: vprokey
-        region: "{{region}}"
+        region: us-east-2
         instance_type: t2.micro
         image: "{{memcache_ami}}"
         wait: yes
@@ -143,7 +143,7 @@
     - name: Creating RabbitMQ rmq01
       ec2:
         key_name: vprokey
-        region: "{{region}}"
+        region: us-east-2
         instance_type: t2.micro
         image: "{{rmq_ami}}"
         wait: yes
@@ -166,7 +166,7 @@
     - name: Creating Mysql db01
       ec2:
         key_name: vprokey
-        region: "{{region}}"
+        region: us-east-2
         instance_type: t2.micro
         image: "{{mysql_ami}}"
         wait: yes
@@ -193,7 +193,7 @@
     - local_action:
         module: ec2_elb_lb
         name: "vprofile-elb"
-        region: "{{region}}"
+        region: us-east-2
         state: present
         instance_ids:
           - "{{ web01_out.tagged_instances[0].id }}"
