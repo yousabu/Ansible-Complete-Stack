@@ -88,7 +88,7 @@
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
-        vpc_subnet_id: "{{privsub1id}}"
+        vpc_subnet_id: "{{pubsub1id}}"
       register: web01_out
 
 
