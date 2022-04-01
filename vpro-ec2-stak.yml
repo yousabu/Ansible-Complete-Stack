@@ -88,7 +88,7 @@
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
-        vpc_subnet_id: "{{pubsub1id}}"
+        vpc_subnet_id: "{{privsub1id}}"
       register: web01_out
 
 
@@ -112,7 +112,7 @@
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
-        vpc_subnet_id: "{{pubsub1id}}"
+        vpc_subnet_id: "{{privsub1id}}"
       register: app01_out
 
 # memecahe
@@ -135,7 +135,7 @@
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
-        vpc_subnet_id: "{{pubsub1id}}"
+        vpc_subnet_id: "{{privsub1id}}"
       register: mc01_out
 
 # RabbitMQ
@@ -158,7 +158,7 @@
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
-        vpc_subnet_id: "{{pubsub1id}}"
+        vpc_subnet_id: "{{privsub1id}}"
       register: rmq01_out
 
 # MYSQL
