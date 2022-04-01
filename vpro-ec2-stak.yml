@@ -59,7 +59,7 @@
       ec2_group:
         name: vproStack-sg
         description: Allow port 22 from everywhere and all port within sg
-        region: "{{region}}"
+        region: us-east-2
         vpc_id: "{{vpcid}}"
         purge_rules: no
         rules:
