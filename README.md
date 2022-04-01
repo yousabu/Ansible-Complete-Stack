@@ -1,6 +1,6 @@
 # Ansible-Complete-Stack
 
-#Tools
+# Tools
 - Ansible
 - python3
 - boto3
