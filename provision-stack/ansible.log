@@ -1,0 +1,46 @@
+2022-04-01 14:05:03,507 p=22925 u=ubuntu n=ansible | PLAY [Generate artifact, copy artifact & sql file to files directory] ************************************************************************************
+2022-04-01 14:05:03,517 p=22925 u=ubuntu n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************
+2022-04-01 14:05:05,088 p=22925 u=ubuntu n=ansible | ok: [localhost]
+2022-04-01 14:05:05,104 p=22925 u=ubuntu n=ansible | TASK [Install  jdk, maven, git] **************************************************************************************************************************
+2022-04-01 14:05:12,256 p=22925 u=ubuntu n=ansible | ok: [localhost] => (item=git)
+2022-04-01 14:05:59,255 p=22925 u=ubuntu n=ansible | changed: [localhost] => (item=openjdk-8-jdk)
+2022-04-01 14:06:09,567 p=22925 u=ubuntu n=ansible | changed: [localhost] => (item=maven)
+2022-04-01 14:06:09,583 p=22925 u=ubuntu n=ansible | TASK [Clone source code from github] *********************************************************************************************************************
+2022-04-01 14:06:14,167 p=22925 u=ubuntu n=ansible | changed: [localhost]
+2022-04-01 14:06:14,178 p=22925 u=ubuntu n=ansible | TASK [mvn install command to build artifact] *************************************************************************************************************
+2022-04-01 14:07:01,280 p=22925 u=ubuntu n=ansible | changed: [localhost]
+2022-04-01 14:07:01,301 p=22925 u=ubuntu n=ansible | TASK [Copy artifacts to files directory] *****************************************************************************************************************
+2022-04-01 14:07:02,419 p=22925 u=ubuntu n=ansible | changed: [localhost] => (item=/home/ubuntu/Ansible-Complete-Stack/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2022-04-01 14:07:02,430 p=22925 u=ubuntu n=ansible | TASK [Copy SQL file to files directory] ******************************************************************************************************************
+2022-04-01 14:07:02,856 p=22925 u=ubuntu n=ansible | changed: [localhost]
+2022-04-01 14:07:02,872 p=22925 u=ubuntu n=ansible | PLAY RECAP ***********************************************************************************************************************************************
+2022-04-01 14:07:02,873 p=22925 u=ubuntu n=ansible | localhost                  : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-04-01 14:08:36,345 p=28813 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************************************
+2022-04-01 14:08:36,375 p=28813 u=ubuntu n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************
+2022-04-01 14:08:38,462 p=28813 u=ubuntu n=ansible | ok: [cntl]
+2022-04-01 14:08:38,565 p=28813 u=ubuntu n=ansible | ok: [web01]
+2022-04-01 14:08:39,618 p=28813 u=ubuntu n=ansible | ok: [app01]
+2022-04-01 14:08:39,711 p=28813 u=ubuntu n=ansible | ok: [rmq01]
+2022-04-01 14:08:39,842 p=28813 u=ubuntu n=ansible | ok: [mc01]
+2022-04-01 14:08:41,697 p=28813 u=ubuntu n=ansible | ok: [db01]
+2022-04-01 14:08:41,716 p=28813 u=ubuntu n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************************************
+2022-04-01 14:08:41,761 p=28813 u=ubuntu n=ansible | ok: [cntl]
+2022-04-01 14:08:41,786 p=28813 u=ubuntu n=ansible | ok: [web01]
+2022-04-01 14:08:41,806 p=28813 u=ubuntu n=ansible | ok: [app01]
+2022-04-01 14:08:41,823 p=28813 u=ubuntu n=ansible | ok: [rmq01]
+2022-04-01 14:08:41,826 p=28813 u=ubuntu n=ansible | ok: [mc01]
+2022-04-01 14:08:41,834 p=28813 u=ubuntu n=ansible | ok: [db01]
+2022-04-01 14:08:41,843 p=28813 u=ubuntu n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************************************
+2022-04-01 14:08:42,670 p=28813 u=ubuntu n=ansible | changed: [web01]
+2022-04-01 14:08:42,671 p=28813 u=ubuntu n=ansible | changed: [rmq01]
+2022-04-01 14:08:42,671 p=28813 u=ubuntu n=ansible | changed: [mc01]
+2022-04-01 14:08:42,672 p=28813 u=ubuntu n=ansible | changed: [app01]
+2022-04-01 14:08:42,719 p=28813 u=ubuntu n=ansible | changed: [cntl]
+2022-04-01 14:08:42,973 p=28813 u=ubuntu n=ansible | changed: [db01]
+2022-04-01 14:08:42,990 p=28813 u=ubuntu n=ansible | PLAY RECAP ***********************************************************************************************************************************************
+2022-04-01 14:08:42,990 p=28813 u=ubuntu n=ansible | app01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-04-01 14:08:42,991 p=28813 u=ubuntu n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-04-01 14:08:42,991 p=28813 u=ubuntu n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-04-01 14:08:42,991 p=28813 u=ubuntu n=ansible | mc01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-04-01 14:08:42,991 p=28813 u=ubuntu n=ansible | rmq01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-04-01 14:08:42,992 p=28813 u=ubuntu n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
