@@ -12,4 +12,3 @@ privRTid: rtb-06f75e8233e7e3049
 # BEGIN ANSIBLE MANAGED BLOCK
 BastionSGid: sg-06c890fd41023db4a
 # END ANSIBLE MANAGED BLOCK
-region: us-east-2
